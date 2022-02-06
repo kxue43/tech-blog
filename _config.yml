@@ -22,7 +22,7 @@ title: Ke Xue's Tech Blog
 email: xueke.kent@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
     Make Open Source thrive by sharing technical knowledge.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "tech-blog" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: xueke477
 linkedin_username: kxue
