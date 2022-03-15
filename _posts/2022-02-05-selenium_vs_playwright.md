@@ -192,25 +192,10 @@ References:
 ### Learn the XPath syntax
 
 It is not uncommon for a front-end framework/library to create `id` attributes for a lot of DOM elements in an HTML
-that it dynamically generates. React, Angular and Ember all do this. In this case, the XPath selector that we get by
+that it dynamically generates. React and Ember both do this. In this case, the XPath selector that we get by
 `right-click => Copy => Copy XPath` from the Chrome Developer Console often starts with such an `id` from the closest
-parent of our target element. This type of selector is useless for web scraping, since the `id` value is different
+ancestor of our target element. This type of selector is useless for web scraping, since the `id` value is different
 for every generation of the HTML. It is better to analyze the SPA and hard code the XPaths by ourselves.
-
-In addition, sometimes there are two elements of different types but the same `id` on the same page. For example:
-
-{% highlight html %}
-<p id="sth">Pay attention to 'something'.</p>
-<a id="sth" href="#">Click for 'something'.</a>
-{% endhighlight %}
-
-This is against the specification of the `id` attribute, but makes sense because it conveniently establishes
-relationship between two elements. CSS selector is not capable of capturing both elements, but XPath selector is:
-
-{% highlight text %}
-xpath=//p[@id='sth']
-xpath=//a[@id='sth']
-{% endhighlight %}
 
 References: [XPath Syntax][xpath-syntax].
 
